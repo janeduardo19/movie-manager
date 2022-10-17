@@ -1,0 +1,20 @@
+<mat-card-content class="mat-card-container" *ngFor="let movie of listMovies">
+  <mat-card class="card-movie">
+    <mat-card-title>
+      <h2>{{ movie.name }}</h2>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <h3>{{ movie.category }}</h3>
+    </mat-card-subtitle>
+    <mat-card-content class="card-content">
+      <img src="{{movie.imgLink}}" alt="capa" />
+      <p class="card-description">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim totam
+        voluptate animi optio voluptatem rem eos, adipisci, fugit ipsa culpa
+        alias velit inventore nihil eius, sunt aut corrupti dolore similique?
+      </p>
+      <p class="card-description">{{movie.price}}</p>
+      <app-select-button (click)="selectMovie(movie)" ></app-select-button>
+    </mat-card-content>
+  </mat-card>
+</mat-card-content>
